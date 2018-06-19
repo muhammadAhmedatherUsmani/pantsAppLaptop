@@ -1,0 +1,48 @@
+<resources>
+	<string name="app_name">Pants</string>
+
+	<string name="hello_world">Hello world!</string>
+	<string name="action_settings">Settings</string>
+
+
+	<plurals name="no_of_secs" >
+		<item quantity="one">%d sec</item>
+		<item quantity="other">%d secs</item>
+	</plurals>
+	<string name="title_activity_game">GameActivity</string>
+	<string name="msg_letter_heading">Your letter is</string>
+	<string name="msg_start_footer">Are you Ready?</string>
+	<string name="title_place">Place</string>
+	<string name="title_animal">Animal</string>
+	<string name="title_name">Name</string>
+	<string name="title_thing">Thing</string>
+	<string name="title_song">Song</string>
+	<string name="title_done">Done!</string>
+	<string name="msg_none_outcome">This match is very confusing!</string>
+
+	<string-array name="array_draw_outcome">
+		<item>Well done for drawing with the BOT! Hard to beat the machine!</item>
+		<item>Well done for drawing with the BOT! You are a machine!</item>
+		<item>Well well someone seems to be as smart as the BOT!</item>
+		<item>You think that you are clever, don\'t you?</item>
+		<item>You can\'t keep up with the BOT forever! But well done for fighting!</item>
+	</string-array>
+
+	<string-array name="array_lost_outcome">
+		<item>PANTS! You\'ve been schooled!</item>
+		<item>PANTS! Better luck next time!</item>
+		<item>PANTS! This is harder than it looks!</item>
+		<item>PANTS! This game of recall is hard!</item>
+		<item>PANTS! The Bot wins! Got to try harder than that!</item>
+	</string-array>
+
+	<string-array name="array_time_over_outcome">
+		<item>Time waits for no one! PANTS!</item>
+		<item>If only you had a few seconds more! PANTS!</item>
+		<item>Get those fingers typing faster slow coach!</item>
+		<item>Seriously? I thought you could do better than that!</item>
+		<item>Get a move on slow poke!</item>
+	</string-array>
+	<!--<string name="msg_draw_outcome">Cheeky! That was some quick thinking. Read to go again?</string>-->
+	<!--<string name="msg_lost_outcome">Pants! Not quick enough. How about another try?</string>-->
+</resources>

@@ -1,0 +1,81 @@
+apply plugin: 'com.android.application'
+apply plugin: 'spoon'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28'
+
+    packagingOptions {
+        exclude 'LICENSE.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+
+    defaultConfig {
+        applicationId "com.erlystagestudios.pantsapplication"
+        minSdkVersion 18
+        targetSdkVersion 28
+        versionCode 8
+        versionName "1.7"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath false
+            }}
+
+    }
+    buildTypes {
+        debug {
+
+            buildConfigField "boolean", "IS_TESTING", "false"
+        }
+
+        typeTest {
+            buildConfigField "boolean", "IS_TESTING", "true"
+        }
+
+        release {
+            buildConfigField "boolean", "IS_TESTING", "false"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile( 'proguard-android.txt' ), 'proguard-rules.pro'
+        }
+    }
+}
+
+spoon {
+    debug = true
+    // To run a single test class
+    className = 'com.erlystagestudios.pantsapplication.StartActivityTest'
+    className = 'com.erlystagestudios.pantsapplication.GameActivityTest'
+    className = 'com.erlystagestudios.pantsapplication.RoundStartTest'
+
+}
+
+dependencies {
+    implementation fileTree( include: ['*.jar'], dir: 'libs' )
+    implementation 'com.android.support:appcompat-v7:24.2.1'
+    implementation 'com.android.support:gridlayout-v7:21.0.3'
+    implementation 'com.jakewharton:butterknife:7.0.1'
+    implementation 'org.apache.commons:commons-lang3:3.0'
+    implementation 'commons-io:commons-io:2.4'
+    implementation project( ':AndroidUtils-debug' )
+
+
+    implementation files('libs/ormlite-android-4.48.jar')
+    implementation files('libs/ormlite-core-4.48.jar')
+
+    implementation 'com.google.dagger:dagger:2.0.1'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.0.1'
+    compileOnly 'org.glassfish:javax.annotation:10.0-b28'
+
+    // Mockito Dependencies
+
+    // Espresso 2 Dependencies
+    androidTestImplementation 'com.google.dexmaker:dexmaker:1.0'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2'
+    androidTestImplementation 'com.android.support.test:runner:0.3'
+    androidTestImplementation 'com.android.support.test.uiautomator:uiautomator-v18:2.1.1'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.0.1'
+    androidTestImplementation 'com.squareup.spoon:spoon-client:1.1.9'
+}

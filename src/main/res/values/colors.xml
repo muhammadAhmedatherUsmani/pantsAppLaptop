@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<color name="transparent">#00000000</color>
+
+	<color name="translucent">#11000000</color>
+
+	<color name="dark_gray">#666</color>
+
+	<color name="lighter_gray">#eee</color>
+
+	<color name="orange">#ECA879</color>
+
+	<color name="mat_teal">#ff00bcd4</color>
+	<!-- teal 500 -->
+	<color name="mat_indigo">#ff3f51b5</color>
+	<!-- indigo 500 -->
+	<color name="mat_blue">#ff4285f4</color>
+	<!-- blue 500 -->
+	<color name="mat_pink">#ffe91e63</color>
+	<!-- pink 500 -->
+	<color name="mat_green">#ff0f9d58</color>
+	<!-- green 500 -->
+	<color name="mat_light_green">#ff8bc34a</color>
+	<!-- light green 500 -->
+	<color name="mat_orange">#ffff9800</color>
+	<!-- orange 500 -->
+	<color name="mat_deep_orange">#ffff5722</color>
+	<!-- deep orange 500 -->
+	<color name="mat_gray">#ff9e9e9e</color>
+	<!-- gray 500 -->
+	<color name="mat_white">#ffffffff</color>
+	<!-- white -->
+</resources>

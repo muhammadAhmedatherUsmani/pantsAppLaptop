@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				xmlns:tools="http://schemas.android.com/tools"
+				android:id="@+id/root_layout"
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="@drawable/bg_round_start"
+		>
+
+	<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/txt_letter_heading"
+			android:text="@string/msg_letter_heading"
+			android:textStyle="bold"
+			android:textSize="@dimen/font_xlarge"
+			android:textAppearance="@style/PrimaryTextAppearance"
+			android:layout_centerHorizontal="true"
+			android:layout_marginTop="54dp"
+			android:paddingTop="@dimen/marginxLarge"
+			/>
+
+	<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/txt_round_alphabet"
+			android:text="A"
+			android:textSize="112sp"
+			android:layout_gravity="center"
+			android:textColor="@color/lighter_gray"
+			style="@style/AudioFileInfoOverlayText"
+			android:layout_centerHorizontal="true"
+			android:layout_below="@+id/txt_letter_heading"
+			android:layout_marginTop="@dimen/marginxLarge"
+			android:layout_marginBottom="@dimen/marginxLarge"
+			android:visibility="gone"
+			/>
+
+	<com.erlystagestudios.pantsapplication.ui.TextImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:id="@+id/image_round_letter"
+			android:layout_below="@+id/txt_letter_heading"
+			android:layout_marginTop="@dimen/marginLarge"
+			/>
+
+	<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:layout_above="@+id/txt_timer"
+			android:text="@string/msg_start_footer"
+			android:textAppearance="@style/PrimaryTextAppearance"
+			android:layout_marginBottom="48dp"
+			/>
+
+	<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:id="@+id/txt_timer"
+			android:textAppearance="@style/PrimaryTextAppearance"
+			android:textSize="31sp"
+			android:layout_marginBottom="32dp"
+			android:layout_alignParentBottom="true"
+			tools:text="3"
+			/>
+</RelativeLayout>

@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				xmlns:app="http://schemas.android.com/apk/res-auto"
+				xmlns:tools="http://schemas.android.com/tools"
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:paddingLeft="@dimen/activity_horizontal_margin"
+				android:paddingRight="@dimen/activity_horizontal_margin"
+				android:paddingTop="@dimen/activity_vertical_margin"
+				android:background="@color/mat_white"
+		>
+
+	<ImageView
+			android:layout_width="84dp"
+			android:layout_height="64dp"
+			android:id="@+id/img_header"
+			android:scaleType="fitCenter"
+			android:src="@drawable/ic_round_end_header"
+			android:layout_centerHorizontal="true"
+			android:layout_marginBottom="@dimen/marginLarge"
+			/>
+
+	<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/txt_heading"
+			android:text="PANTASTIC!"
+			android:textAppearance="@style/PrimaryTextAppearance.Title.Orange"
+			android:layout_marginBottom="@dimen/marginSmall"
+			android:layout_below="@id/img_header"
+			android:layout_centerHorizontal="true"
+			/>
+
+	<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/txt_outcome"
+			app:layout_columnSpan="3"
+			android:layout_below="@+id/txt_heading"
+			android:gravity="center"
+			app:layout_gravity="fill"
+			android:layout_marginBottom="@dimen/marginxLarge"
+			android:textAppearance="@style/PrimaryTextAppearance" />
+
+	<TableLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/grid_player1_summary"
+			android:layout_below="@+id/txt_outcome"
+			android:layout_toLeftOf="@+id/separator"
+			android:shrinkColumns="0"
+			android:stretchColumns="0"
+			android:layout_marginTop="@dimen/marginLarge"
+			android:paddingLeft="@dimen/marginMedium"
+			>
+
+		<TableRow android:layout_marginBottom="@dimen/marginSmall">
+
+			<TextView
+					android:text="Human"
+					android:id="@+id/txt_player1_title"
+					android:textSize="@dimen/font_large"
+					app:layout_gravity="left|clip_horizontal"
+					app:layout_columnWeight="1"
+					android:textColor="@color/orange"
+					android:layout_gravity="center_vertical" />
+
+			<TextView
+					tools:text="50"
+					android:id="@+id/txt_player1_score"
+					android:textSize="@dimen/font_large"
+					android:gravity="center"
+					app:layout_columnWeight="1"
+					android:textColor="@color/orange"
+					android:layout_gravity="center_vertical" />
+		</TableRow>
+
+		<TableRow android:layout_marginBottom="@dimen/marginSmall">
+
+			<TextView
+					tools:text="Amsterdam"
+					android:id="@+id/txt_player1_place"
+					android:gravity="left"
+					app:layout_gravity="left"
+					app:layout_columnWeight="1"
+					android:textAppearance="@style/PrimaryTextAppearance.Summary"
+					android:layout_marginRight="@dimen/marginSmall"
+					android:layout_gravity="center_vertical" />
+
+			<TextView
+					tools:text="50"
+					android:id="@+id/txt_player1_place_score"
+					android:gravity="center"
+					app:layout_columnWeight="1"
+					android:layout_gravity="right|top"
+					android:textAppearance="@style/PrimaryTextAppearance.Summary" />
+		</TableRow>
+
+		<TableRow android:layout_marginBottom="@dimen/marginSmall">
+
+			<TextView
+					tools:text="Ant"
+					android:id="@+id/txt_player1_animal"
+					android:gravity="left"
+					app:layout_gravity="left"
+					app:layout_columnWeight="1"
+					android:layout_marginRight="@dimen/marginSmall"
+					android:layout_gravity="center_vertical"
+					android:textAppearance="@style/PrimaryTextAppearance.Summary" />
+
+			<TextView
+					tools:text="50"
+					android:id="@+id/txt_player1_animal_score"
+					android:gravity="center"
+					app:layout_columnWeight="1"
+					android:layout_gravity="right|top"
+					android:textAppearance="@style/PrimaryTextAppearance.Summary" />
+		</TableRow>
+
+		<TableRow android:layout_marginBottom="@dimen/marginSmall">
+
+			<TextView
+					tools:text="Alex"
+					android:id="@+id/txt_player1_name"
+					android:gravity="left"
+					app:layout_gravity="left"
+					app:layout_columnWeight="1"
+					android:layout_marginRight="@dimen/marginSmall"
+					android:layout_gravity="center_vertical"
+					android:textAppearance="@style/PrimaryTextAppearance.Summary" />
+
+			<TextView
+					tools:text="50"
+					android:id="@+id/txt_player1_name_score"
+					android:gravity="center"
+					app:layout_columnWeight="1"
+					android:layout_gravity="right|top"
+					android:textAppearance="@style/PrimaryTextAppearance.Summary" />
+
+		</TableRow>
+
+		<TableRow android:layout_marginBottom="@dimen/marginSmall">
+
+			<TextView
+					tools:text="Arm"
+					android:id="@+id/txt_player1_thing"
+					android:gravity="left"
+					app:layout_gravity="left"
+					app:layout_columnWeight="1"
+					android:layout_marginRight="@dimen/marginSmall"
+					android:layout_gravity="center_vertical"
+					android:textAppearance="@style/PrimaryTextAppearance.Summary" />
+
+			<TextView
+					tools:text="50"
+					android:id="@+id/txt_player1_thing_score"
+					android:gravity="center"
+					app:layout_columnWeight="1"
+					android:layout_gravity="right|top"
+					android:textAppearance="@style/PrimaryTextAppearance.Summary" />
+
+
+		</TableRow>
+
+		<TableRow android:layout_marginBottom="@dimen/marginSmall">
+
+			<TextView
+					tools:text="A place with no name"
+					android:id="@+id/txt_player1_song"
+					app:layout_gravity="left"
+					app:layout_columnWeight="0.1"
+					android:gravity="left"
+					android:layout_marginRight="@dimen/marginSmall"
+					android:layout_gravity="center_vertical"
+					android:textAppearance="@style/PrimaryTextAppearance.Summary" />
+
+			<TextView
+					tools:text="50"
+					android:id="@+id/txt_player1_song_score"
+					android:layout_gravity="right"
+					app:layout_columnWeight="1"
+					android:textAppearance="@style/PrimaryTextAppearance.Summary" />
+		</TableRow>
+	</TableLayout>
+
+	<TableLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/grid_player2_summary"
+			android:layout_below="@+id/txt_outcome"
+			android:layout_toRightOf="@+id/separator"
+			android:stretchColumns="1"
+			android:shrinkColumns="1"
+			android:layout_marginTop="@dimen/marginLarge"
+			android:paddingRight="@dimen/marginMedium"
+			>
+
+		<TableRow android:layout_marginBottom="@dimen/marginSmall">
+
+			<TextView
+					android:text="50"
+					android:id="@+id/txt_player2_score"
+					android:gravity="center"
+					app:layout_columnWeight="1"
+					android:textSize="@dimen/font_large"
+					android:textColor="@color/orange"
+					android:layout_gravity="left|top" />
+
+			<TextView
+					android:text="Bot"
+					android:id="@+id/txt_player2_title"
+					app:layout_gravity="fill"
+					app:layout_columnWeight="1"
+					android:textSize="@dimen/font_large"
+					android:gravity="right"
+					android:textColor="@color/orange" />
+
+		</TableRow>
+
+		<TableRow android:layout_marginBottom="@dimen/marginSmall">
+
+			<TextView
+					android:text="50"
+					android:id="@+id/txt_player2_place_score"
+					android:gravity="center"
+					app:layout_gravity="fill"
+					app:layout_columnWeight="1"
+					android:layout_gravity="top|left"
+					android:textAppearance="@style/PrimaryTextAppearance.Summary" />
+
+			<TextView
+					android:text="Argentina"
+					android:id="@+id/txt_player2_place"
+					app:layout_gravity="fill"
+					app:layout_columnWeight="1"
+					android:gravity="right"
+					android:textAppearance="@style/PrimaryTextAppearance.Summary" />
+
+		</TableRow>
+
+		<TableRow android:layout_marginBottom="@dimen/marginSmall">
+
+			<TextView
+					android:text="50"
+					android:id="@+id/txt_player2_animal_score"
+					android:gravity="center"
+					app:layout_gravity="fill"
+					app:layout_columnWeight="1"
+					android:layout_gravity="top|left"
+					android:textAppearance="@style/PrimaryTextAppearance.Summary" />
+
+			<TextView
+					android:text="Alligtor"
+					android:id="@+id/txt_player2_animal"
+					app:layout_gravity="fill"
+					app:layout_columnWeight="1"
+					android:gravity="right"
+					android:textAppearance="@style/PrimaryTextAppearance.Summary" />
+
+		</TableRow>
+
+		<TableRow android:layout_marginBottom="@dimen/marginSmall">
+
+			<TextView
+					android:text="50"
+					android:id="@+id/txt_player2_name_score"
+					android:gravity="center"
+					app:layout_gravity="fill"
+					app:layout_columnWeight="1"
+					android:layout_gravity="top|left"
+					android:textAppearance="@style/PrimaryTextAppearance.Summary" />
+
+			<TextView
+					android:text="Anna"
+					android:id="@+id/txt_player2_name"
+					app:layout_gravity="fill"
+					app:layout_columnWeight="1"
+					android:gravity="right"
+					android:textAppearance="@style/PrimaryTextAppearance.Summary" />
+
+		</TableRow>
+
+		<TableRow android:layout_marginBottom="@dimen/marginSmall">
+
+			<TextView
+					android:text="50"
+					android:id="@+id/txt_player2_thing_score"
+					android:gravity="center"
+					app:layout_gravity="fill"
+					app:layout_columnWeight="1"
+					android:layout_gravity="top|left"
+					android:textAppearance="@style/PrimaryTextAppearance.Summary" />
+
+			<TextView
+					android:text="Apple"
+					android:id="@+id/txt_player2_thing"
+					app:layout_gravity="fill"
+					app:layout_columnWeight="1"
+					android:gravity="right"
+					android:textAppearance="@style/PrimaryTextAppearance.Summary" />
+
+		</TableRow>
+
+		<TableRow android:layout_marginBottom="@dimen/marginSmall">
+
+			<TextView
+					android:text="50"
+					android:id="@+id/txt_player2_song_score"
+					android:gravity="center"
+					app:layout_gravity="fill"
+					app:layout_columnWeight="1"
+					android:layout_gravity="top|left"
+					android:textAppearance="@style/PrimaryTextAppearance.Summary" />
+
+			<TextView
+					android:text="All of me"
+					android:id="@+id/txt_player2_song"
+					app:layout_gravity="fill"
+					app:layout_columnWeight="1"
+					android:gravity="right"
+					android:textAppearance="@style/PrimaryTextAppearance.Summary" />
+		</TableRow>
+	</TableLayout>
+
+	<View
+			android:id="@+id/separator"
+			android:layout_width="2dp"
+			android:layout_height="match_parent"
+			android:background="@color/dark_gray"
+			android:layout_centerHorizontal="true"
+			android:layout_marginRight="@dimen/marginSmall"
+			android:layout_marginLeft="@dimen/marginSmall"
+			android:layout_marginTop="24dp"
+			android:layout_alignTop="@+id/grid_player1_summary"
+			android:layout_alignBottom="@+id/grid_player1_summary"
+			/>
+
+	<Button
+			android:id="@+id/btn_new_round"
+			android:text="Play again"
+			style="@style/Widget.Button"
+			android:layout_alignParentBottom="true"
+			android:layout_marginBottom="@dimen/marginLarge"
+			android:layout_centerHorizontal="true"
+			/>
+
+</RelativeLayout>

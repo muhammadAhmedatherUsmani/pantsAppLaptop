@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:drawable="@color/mat_white">
+
+	</item>
+	<item>
+		<clip
+				android:clipOrientation="vertical"
+				android:gravity="bottom"
+				android:drawable="@drawable/square_mask"
+				/>
+	</item>
+</layer-list>
+		<!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android">-->
+		<!--<item>-->
+		<!--<shape android:shape="oval">-->
+		<!--<solid android:color="#000" />-->
+		<!--</shape>-->
+		<!--</item>-->
+		<!--<item>-->
+		<!--<bitmap android:src="@drawable/square_mask" />-->
+		<!--</item>-->
+		<!--</layer-list>-->
