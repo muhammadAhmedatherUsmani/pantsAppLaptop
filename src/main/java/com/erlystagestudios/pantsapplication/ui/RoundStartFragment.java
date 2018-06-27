@@ -5,16 +5,23 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.view.*;
-import android.widget.*;
-import butterknife.Bind;
-import butterknife.ButterKnife;
-import com.erlystagestudios.pantsapplication.*;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import com.erlystagestudios.pantsapplication.BotController;
+import com.erlystagestudios.pantsapplication.PantsApplication;
+import com.erlystagestudios.pantsapplication.R;
 import com.erlystagestudios.pantsapplication.controller.GameComponent;
 import com.erlystagestudios.pantsapplication.model.Round;
 import com.hassan.androidutils.LogUtils;
 
 import javax.inject.Inject;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
 
 /**
  * Created by Trikster on 7/1/2015.
@@ -46,6 +53,12 @@ public class RoundStartFragment extends Fragment {
 	public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View view = inflater.inflate( R.layout.fragment_round_start, container, false );
 		ButterKnife.bind( this, view );
+		txtAlphabet =(TextView) view.findViewById(R.id.txt_round_alphabet);
+		imageRoundLetter=(TextImageView) view.findViewById(R.id.image_round_letter);
+		txtTimer = (TextView)view.findViewById(R.id.txt_timer);
+
+
+
 		return view;
 	}
 
@@ -55,6 +68,7 @@ public class RoundStartFragment extends Fragment {
 
 		GameComponent component = PantsApplication.component( getActivity() );
 		component.inject( this );
+
 
 		round.setCurrentLetter( Round.getRandomAlphabet().toUpperCase() );
 		txtAlphabet.setText( round.getCurrentLetter() );

@@ -3,7 +3,7 @@
 				android:layout_width="match_parent"
 				android:layout_height="match_parent"
 				android:background="@color/lighter_gray"
-				tools:context=".StartActivity">
+				tools:context="ui.StartActivity">
 
 	<FrameLayout
 			android:id="@+id/layout_container"
@@ -11,9 +11,9 @@
 			android:layout_height="match_parent">
 
 	</FrameLayout>
-<ImageView
-	android:layout_width="match_parent"
-	android:layout_height="match_parent"
-	android:id="@+id/imgg"
-	android:src="@drawable/logo"/>
+<!--<ImageView-->
+	<!--android:layout_width="match_parent"-->
+	<!--android:layout_height="match_parent"-->
+	<!--android:id="@+id/imgg"-->
+	<!--android:src="@drawable/logo"/>-->
 </RelativeLayout>

@@ -21,6 +21,7 @@ public class StartActivity extends BaseActivity {
 	protected void onCreate (Bundle savedInstanceState) {
 		super.onCreate( savedInstanceState );
 		setContentView( R.layout.activity_start );
+
 		PantsApplication.component( this ).inject( this );
 		if (null == savedInstanceState) {
 			addStartFragment();
