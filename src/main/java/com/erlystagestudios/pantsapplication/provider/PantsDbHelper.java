@@ -2,11 +2,13 @@ package com.erlystagestudios.pantsapplication.provider;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
+
 import com.erlystagestudios.pantsapplication.model.Turn;
 import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.RuntimeExceptionDao;
 import com.j256.ormlite.support.ConnectionSource;
+import com.j256.ormlite.table.TableUtils;
 
 import java.sql.SQLException;
 
@@ -33,25 +35,25 @@ public class PantsDbHelper extends OrmLiteSqliteOpenHelper {
 	@Override
 	public void onCreate (SQLiteDatabase sqLiteDatabase, ConnectionSource connectionSource) {
 		helper.onCreate( sqLiteDatabase );
-//		try {
-//			TableUtils.createTable( connectionSource, Turn.class );
-//		}
-//		catch (SQLException e) {
-//			e.printStackTrace();
-//		}
+		try {
+			TableUtils.createTable( connectionSource, Turn.class );
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override
 	public void onUpgrade (SQLiteDatabase sqLiteDatabase, ConnectionSource connectionSource, int oldVersion,
 						   int newVersion) {
 		helper.onUpgrade( sqLiteDatabase, oldVersion, newVersion );
-//		try {
-//			TableUtils.dropTable( connectionSource, Turn.class, true );
-//			onCreate( sqLiteDatabase, connectionSource );
-//		}
-//		catch (SQLException e) {
-//			e.printStackTrace();
-//		}
+		try {
+			TableUtils.dropTable( connectionSource, Turn.class, true );
+			onCreate( sqLiteDatabase, connectionSource );
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override

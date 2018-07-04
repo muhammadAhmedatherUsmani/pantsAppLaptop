@@ -19,7 +19,7 @@
 			android:src="@drawable/ic_round_end_header"
 			android:layout_centerHorizontal="true"
 			android:layout_marginBottom="@dimen/marginLarge"
-			/>
+		android:contentDescription="TODO" />
 
 	<TextView
 			android:layout_width="wrap_content"
@@ -58,7 +58,7 @@
 		<TableRow android:layout_marginBottom="@dimen/marginSmall">
 
 			<TextView
-					android:text="Human"
+					android:text="@string/human"
 					android:id="@+id/txt_player1_title"
 					android:textSize="@dimen/font_large"
 					app:layout_gravity="left|clip_horizontal"
@@ -251,12 +251,12 @@
 					android:textAppearance="@style/PrimaryTextAppearance.Summary" />
 
 			<TextView
-					android:text="Alligtor"
-					android:id="@+id/txt_player2_animal"
-					app:layout_gravity="fill"
-					app:layout_columnWeight="1"
-					android:gravity="right"
-					android:textAppearance="@style/PrimaryTextAppearance.Summary" />
+				android:id="@+id/txt_player2_animal"
+				android:gravity="right"
+				android:text="               "
+				android:textAppearance="@style/PrimaryTextAppearance.Summary"
+				app:layout_columnWeight="1"
+				app:layout_gravity="fill" />
 
 		</TableRow>
 

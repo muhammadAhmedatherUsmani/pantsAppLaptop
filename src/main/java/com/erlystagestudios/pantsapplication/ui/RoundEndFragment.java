@@ -21,7 +21,6 @@ import com.hassan.androidutils.LogUtils;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -38,57 +37,35 @@ public class RoundEndFragment extends Fragment {
 	@Inject
 	Round           round;
 
-	@Bind(R.id.txt_outcome)
+
 	TextView txtPlayerOutcome;
 
-	@Bind(R.id.txt_player1_place)
 	TextView txtPlayer1Place;
-	@Bind(R.id.txt_player1_place_score)
 	TextView txtPlayer1PlaceScore;
-	@Bind(R.id.txt_player2_place)
 	TextView txtPlayer2Place;
-	@Bind(R.id.txt_player2_place_score)
 	TextView txtPlayer2PlaceScore;
 
-	@Bind(R.id.txt_player1_animal)
 	TextView txtPlayer1Animal;
-	@Bind(R.id.txt_player1_animal_score)
 	TextView txtPlayer1AnimalScore;
-	@Bind(R.id.txt_player2_animal)
 	TextView txtPlayer2Animal;
-	@Bind(R.id.txt_player2_animal_score)
 	TextView txtPlayer2AnimalScore;
 
-	@Bind(R.id.txt_player1_name)
 	TextView txtPlayer1Name;
-	@Bind(R.id.txt_player1_name_score)
 	TextView txtPlayer1NameScore;
-	@Bind(R.id.txt_player2_name)
 	TextView txtPlayer2Name;
-	@Bind(R.id.txt_player2_name_score)
 	TextView txtPlayer2NameScore;
 
-	@Bind(R.id.txt_player1_thing)
 	TextView txtPlayer1Thing;
-	@Bind(R.id.txt_player1_thing_score)
 	TextView txtPlayer1ThingScore;
-	@Bind(R.id.txt_player2_thing)
 	TextView txtPlayer2Thing;
-	@Bind(R.id.txt_player2_thing_score)
 	TextView txtPlayer2ThingScore;
 
-	@Bind(R.id.txt_player1_song)
 	TextView txtPlayer1Song;
-	@Bind(R.id.txt_player1_song_score)
 	TextView txtPlayer1SongScore;
-	@Bind(R.id.txt_player2_song)
 	TextView txtPlayer2Song;
-	@Bind(R.id.txt_player2_song_score)
 	TextView txtPlayer2SongScore;
 
-	@Bind(R.id.txt_player1_score)
 	TextView txtPlayer1Score;
-	@Bind(R.id.txt_player2_score)
 	TextView txtPlayer2Score;
 
 	private GameInteractionListener gameListener;

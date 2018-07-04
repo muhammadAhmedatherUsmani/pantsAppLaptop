@@ -24,6 +24,10 @@ import java.util.*;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
+import static junit.framework.TestCase.assertNotNull;
+import static junit.framework.TestCase.assertTrue;
+import static org.junit.Assert.assertEquals;
+
 /**
  * Created by Trikster on 7/23/2015.
  */

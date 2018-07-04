@@ -57,7 +57,7 @@ public class Turn implements Parcelable {
 	@DatabaseField(columnName = TurnEntry.COLUMN_ROUND_LETTER)
 	String roundLetter;
 
-	@DatabaseField(columnName = TurnEntry.COLUMN_PLAYER_TYPE, defaultValue = "HUMAN")
+	@DatabaseField(columnName = TurnEntry.COLUMN_PLAYER_TYPE, defaultValue = "HUMAN AHMED")
 	private PlayerType playerType; //Values can be bot or human, bot used to import csv.
 
 	public Turn () {
