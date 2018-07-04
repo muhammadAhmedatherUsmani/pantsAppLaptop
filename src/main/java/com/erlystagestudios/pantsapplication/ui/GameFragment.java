@@ -68,9 +68,9 @@ public class GameFragment extends Fragment {
 	public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View view = inflater.inflate( R.layout.fragment_game, container, false );
 		ButterKnife.bind( this, view );
-		txtAlphabet=(TextView)view.findViewById(R.id.txt_alphabet);
-		txtTimer=(TextView)view.findViewById(R.id.txt_timer);
-		Button btn_submit = (Button)view.findViewById(R.id.btn_submit);
+		txtAlphabet=view.findViewById(R.id.txt_alphabet);
+		txtTimer=view.findViewById(R.id.txt_timer);
+		Button btn_submit = view.findViewById(R.id.btn_submit);
 		btn_submit.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {

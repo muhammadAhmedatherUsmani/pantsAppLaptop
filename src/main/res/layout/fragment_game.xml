@@ -159,9 +159,9 @@
 				style="@style/TextViewStyle"
 				android:textAppearance="@style/PrimaryTextAppearance.Title.Orange"
 				tools:text="01:00"
-				android:layout_marginTop="@dimen/marginLarge"
-				/>
+			/>
 
+		android:layout_marginTop="@dimen/marginLarge"
 		<Button
 				android:layout_gravity="center_horizontal"
 				android:id="@+id/btn_submit"
