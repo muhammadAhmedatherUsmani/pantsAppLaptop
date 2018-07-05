@@ -93,36 +93,36 @@ public class RoundEndFragment extends Fragment {
 	public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View view = inflater.inflate( R.layout.fragment_round_end, container, false );
 		ButterKnife.bind( this, view );
-		txtPlayer1Place =(TextView)view.findViewById(R.id.txt_player1_place);
-		txtPlayer1PlaceScore=(TextView)view.findViewById(R.id.txt_player1_place_score);
-		txtPlayer2Place=(TextView)view.findViewById(R.id.txt_player2_place);
-		txtPlayer2PlaceScore=(TextView)view.findViewById(R.id.txt_player2_place_score);
+		txtPlayer1Place =view.findViewById(R.id.txt_player1_place);
+		txtPlayer1PlaceScore=view.findViewById(R.id.txt_player1_place_score);
+		txtPlayer2Place=view.findViewById(R.id.txt_player2_place);
+		txtPlayer2PlaceScore=view.findViewById(R.id.txt_player2_place_score);
 
-		txtPlayer1Animal =(TextView)view.findViewById(R.id.txt_player1_animal);
-		txtPlayer1AnimalScore=(TextView)view.findViewById(R.id.txt_player1_animal_score);
-		txtPlayer2Animal=(TextView)view.findViewById(R.id.txt_player2_animal);
-		txtPlayer2AnimalScore=(TextView)view.findViewById(R.id.txt_player2_animal_score);
+		txtPlayer1Animal =view.findViewById(R.id.txt_player1_animal);
+		txtPlayer1AnimalScore=view.findViewById(R.id.txt_player1_animal_score);
+		txtPlayer2Animal=view.findViewById(R.id.txt_player2_animal);
+		txtPlayer2AnimalScore=view.findViewById(R.id.txt_player2_animal_score);
 
-		txtPlayer1Name =(TextView)view.findViewById(R.id.txt_player1_name);
-		txtPlayer1NameScore=(TextView)view.findViewById(R.id.txt_player1_name_score);
-		txtPlayer2Name=(TextView)view.findViewById(R.id.txt_player2_name);
-		txtPlayer2NameScore=(TextView)view.findViewById(R.id.txt_player2_name_score);
+		txtPlayer1Name =view.findViewById(R.id.txt_player1_name);
+		txtPlayer1NameScore=view.findViewById(R.id.txt_player1_name_score);
+		txtPlayer2Name=view.findViewById(R.id.txt_player2_name);
+		txtPlayer2NameScore=view.findViewById(R.id.txt_player2_name_score);
 
-		txtPlayer1Thing =(TextView)view.findViewById(R.id.txt_player1_thing);
-		txtPlayer1ThingScore=(TextView)view.findViewById(R.id.txt_player1_thing_score);
-		txtPlayer2Thing=(TextView)view.findViewById(R.id.txt_player2_thing);
-		txtPlayer2ThingScore=(TextView)view.findViewById(R.id.txt_player2_thing_score);
+		txtPlayer1Thing =view.findViewById(R.id.txt_player1_thing);
+		txtPlayer1ThingScore=view.findViewById(R.id.txt_player1_thing_score);
+		txtPlayer2Thing=view.findViewById(R.id.txt_player2_thing);
+		txtPlayer2ThingScore=view.findViewById(R.id.txt_player2_thing_score);
 
-		txtPlayer1Song =(TextView)view.findViewById(R.id.txt_player1_song);
-		txtPlayer1SongScore=(TextView)view.findViewById(R.id.txt_player1_song_score);
-		txtPlayer2Song=(TextView)view.findViewById(R.id.txt_player2_song);
-		txtPlayer2SongScore=(TextView)view.findViewById(R.id.txt_player2_song_score);
+		txtPlayer1Song =view.findViewById(R.id.txt_player1_song);
+		txtPlayer1SongScore=view.findViewById(R.id.txt_player1_song_score);
+		txtPlayer2Song=view.findViewById(R.id.txt_player2_song);
+		txtPlayer2SongScore=view.findViewById(R.id.txt_player2_song_score);
 
-		txtPlayer1Score=(TextView)view.findViewById(R.id.txt_player1_score);
-		txtPlayer2Score=(TextView)view.findViewById(R.id.txt_player2_score);
+		txtPlayer1Score=view.findViewById(R.id.txt_player1_score);
+		txtPlayer2Score=view.findViewById(R.id.txt_player2_score);
 
-		txtPlayerOutcome=(TextView)view.findViewById(R.id.txt_outcome);
-		Button btn_new_round =(Button)view.findViewById(R.id.btn_new_round);
+		txtPlayerOutcome=view.findViewById(R.id.txt_outcome);
+		Button btn_new_round =view.findViewById(R.id.btn_new_round);
 		btn_new_round.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
