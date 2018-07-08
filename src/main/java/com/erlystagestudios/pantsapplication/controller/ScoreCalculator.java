@@ -32,14 +32,14 @@ public class ScoreCalculator {
 	public int getScore (Turn turn) throws SQLException {
 		// TODO get all PANTS for the playertype and letter and if given is unique score will be 10 otherwise, 5
 
-		if (turn.getPlayerType() == PlayerType.BOT) {
-			turn.setPlaceMultiple( 1 );
-			turn.setAnimalMultiple( 1 );
-			turn.setNameMultiple( 1 );
-			turn.setThingMultiple( 1 );
-			turn.setSongMultiple( 1 );
-			return 5 * SCORE_HIGH;
-		}
+//		if (turn.getPlayerType() == PlayerType.BOT) {
+//			turn.setPlaceMultiple( 1 );
+//			turn.setAnimalMultiple( 1 );
+//			turn.setNameMultiple( 1 );
+//			turn.setThingMultiple( 1 );
+//			turn.setSongMultiple( 1 );
+//			return 5 * SCORE_HIGH;
+//		}
 
 		float multipleSum = 0, temp = 0;
 		temp = getWordMultiple( turn.getRoundLetter(), TurnEntry.COLUMN_PLACE, turn.getPlace() );

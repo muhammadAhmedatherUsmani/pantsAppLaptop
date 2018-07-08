@@ -70,6 +70,12 @@ public class GameFragment extends Fragment {
 		ButterKnife.bind( this, view );
 		txtAlphabet=view.findViewById(R.id.txt_alphabet);
 		txtTimer=view.findViewById(R.id.txt_timer);
+		edtPlace=view.findViewById(R.id.edt_place);
+		edtAnimal=view.findViewById(R.id.edt_animal);
+		edtName=view.findViewById(R.id.edt_name);
+		edtThing=view.findViewById(R.id.edt_thing);
+		edtSong=view.findViewById(R.id.edt_song);
+
 		Button btn_submit = view.findViewById(R.id.btn_submit);
 		btn_submit.setOnClickListener(new View.OnClickListener() {
 			@Override

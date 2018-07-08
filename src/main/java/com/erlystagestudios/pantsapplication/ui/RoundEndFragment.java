@@ -151,7 +151,7 @@ public class RoundEndFragment extends Fragment {
 		super.onViewCreated( view, savedInstanceState );
 		Turn player1Turn = round.getHumanTurn();
 		Turn player2Turn = round.getBotTurn();
-//
+
 //		try {
 //			player1Turn.setScore( scorer.getScore( player1Turn ) );
 //			player2Turn.setScore( scorer.getScore( player2Turn ) );
