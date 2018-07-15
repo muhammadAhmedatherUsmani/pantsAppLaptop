@@ -11,7 +11,9 @@ import com.j256.ormlite.stmt.QueryBuilder;
 import com.j256.ormlite.stmt.Where;
 
 import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.inject.Inject;
 
@@ -32,10 +34,9 @@ public class ScoreCalculator {
 	public int getScore (Turn turn) throws SQLException {
 		// TODO get all PANTS for the playertype and letter and if given is unique score will be 10 otherwise, 5
 
-//		if (turn.getPlayerType() == PlayerType.BOT) {
-//			turn.setPlaceMultiple( 1 );
-//			turn.setAnimalMultiple( 1 );
-//			turn.setNameMultiple( 1 );
+//		if (turn.getPlayerType() == PlayerType.HUMAN){	turn.setPlaceMultiple(1);
+//			turn.setAnimalMultiple(1);
+//			turn.setNameMultiple(1);
 //			turn.setThingMultiple( 1 );
 //			turn.setSongMultiple( 1 );
 //			return 5 * SCORE_HIGH;
@@ -62,7 +63,7 @@ public class ScoreCalculator {
 	}
 
 	public int calculateScore (Turn humanTurn, Turn botTurn) throws SQLException {
-		float multipleSum = 0, temp = 0;
+		float multipleSum =0,temp = 0;
 		humanTurn.setPlaceMultiple( temp = getWordMultiple( humanTurn.getRoundLetter(),
 				TurnEntry.COLUMN_PLACE,
 				humanTurn.getPlace(),
@@ -100,10 +101,10 @@ public class ScoreCalculator {
 		String humanTrimmedValue = getTrimmedValue( roundLetter, humanValue );
 		String botTrimmedValue = getTrimmedValue( roundLetter, botValue );
 
-		if (botTrimmedValue == null) {
-			return 1;
-		} else if (humanTrimmedValue == null) {
+		if (humanTrimmedValue == null) {
 			return 0;
+		} else if (botTrimmedValue == null) {
+			return 1;
 		} else if (humanTrimmedValue.equalsIgnoreCase( botTrimmedValue )) {
 			return 0.5f;
 		} else {
@@ -119,9 +120,9 @@ public class ScoreCalculator {
 
 	private float getWordMultipleFromDbValidation (String roundLetter, String columnName, String trimmedValue) throws SQLException {
 		Dao<Turn, Integer> turnDao = dbHelper.getTurnDao();
-		//		Map<String, Object> map = new HashMap<>();
-		//		map.put( TurnEntry.COLUMN_ROUND_LETTER, roundLetter );
-		//		map.put( columnName, trimmedValue );
+				Map<String, Object> map = new HashMap<>();
+				map.put( TurnEntry.COLUMN_ROUND_LETTER, roundLetter );
+				map.put( columnName, trimmedValue );
 
 		QueryBuilder<Turn, Integer> builder = turnDao.queryBuilder();
 		Where<Turn, Integer> where = builder.where();
@@ -129,7 +130,7 @@ public class ScoreCalculator {
 				where.eq( TurnEntry.COLUMN_PLAYER_TYPE, PlayerType.HUMAN ) );
 
 		List<Turn> turns = turnDao.query( builder.prepare() );
-//				turnDao.queryForFieldValuesArgs( map );
+				turnDao.queryForFieldValuesArgs( map );
 		return turns.size() == 0 ? 1 : 0.5f; // No turn found in the column with given value then multiple is 1 else 0
 	}
 

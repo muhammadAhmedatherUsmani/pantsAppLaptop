@@ -22,7 +22,6 @@ import com.hassan.androidutils.LogUtils;
 import javax.inject.Inject;
 
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 import static com.erlystagestudios.pantsapplication.controller.GameConfig.SCORE_HIGH;
 
@@ -141,6 +140,12 @@ public class RoundEndFragment extends Fragment {
 					gameListener.addRoundStartFragment();
 				}
 
+//				RoundStartFragment nextFrag= new RoundStartFragment();
+//				getActivity().getSupportFragmentManager().beginTransaction()
+//						.replace(view.getId(), nextFrag,"tag")
+//						.addToBackStack(null)
+//						.commit();
+
 			}
 		});
 		return view;
@@ -206,15 +211,20 @@ public class RoundEndFragment extends Fragment {
 		txtPlayerOutcome.setText( outcomeMessages[index] );
 	}
 
-	@OnClick(R.id.btn_new_round)
-	public void onNewRoundClicked () {
-
-	}
+//	@OnClick(R.id.btn_new_round)
+//	public void onNewRoundClicked () {
+//
+//	}
 
 	@Override
 	public void onAttach (Activity activity) {
 		super.onAttach( activity );
-//		gameListener = FragmentUtils.castActivity( activity, GameInteractionListener.class );
+		if (activity instanceof GameInteractionListener) {
+			gameListener = (GameInteractionListener) activity;
+		} else {
+			throw new IllegalArgumentException( activity.getLocalClassName() + " must implement " +
+					FragmentInteractionListener.class.getCanonicalName() );
+		}
 	}
 
 	@Override

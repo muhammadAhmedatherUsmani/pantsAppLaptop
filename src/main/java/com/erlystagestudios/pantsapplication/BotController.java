@@ -10,6 +10,7 @@ import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.stmt.QueryBuilder;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -29,7 +30,22 @@ public class BotController implements Runnable {
 		String currentLetter = round.getCurrentLetter();
 		Dao<Turn, Integer> turnDao = dbHelper.getTurnDao();
 		QueryBuilder<Turn, Integer> builder = turnDao.queryBuilder();
-		List<Turn> turns = builder.where().like( TurnContract.TurnEntry.COLUMN_ROUND_LETTER, currentLetter ).query();
+		List<Turn> _turns = builder.where().like( TurnContract.TurnEntry.COLUMN_ROUND_LETTER, currentLetter ).query();
+
+		List<Turn> turns = new ArrayList<>();
+
+		for (int i=0; i<_turns.size(); i++) {
+   			Turn myTurn = _turns.get(i);
+			if(
+				!myTurn.getAnimal().isEmpty()
+				&& !myTurn.getName().isEmpty()
+				&& !myTurn.getPlace().isEmpty()
+				&& !myTurn.getThing().isEmpty()
+				&& !myTurn.getSong().isEmpty()
+			) {
+				turns.add(myTurn);
+			}
+		}
 
 		if (turns.size() <= 0) {
 			throw new IllegalStateException( "Bot unable to make word with the given letter" );
