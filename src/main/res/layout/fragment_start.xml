@@ -10,6 +10,7 @@
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
 			android:id="@+id/video_view"
+
 			/>
 
 	<ImageView
@@ -21,7 +22,8 @@
 			android:layout_gravity="center_horizontal"
 			android:layout_marginTop="32dp"
 			android:visibility="gone"
-			/>
+			android:background="@color/mat_green"
+		/>
 
 	<Button
 			style="@style/Widget.Button"
@@ -49,4 +51,5 @@
 				android:src="@drawable/logo_p"
 				/>
 	</RelativeLayout>
+
 </RelativeLayout>

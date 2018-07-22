@@ -62,6 +62,92 @@ public class ScoreCalculator {
 		return (int) (multipleSum * SCORE_HIGH);
 	}
 
+	public int getBotScore (Turn botTurn, Turn humanTurn) throws SQLException {
+		// calculate place score
+		String humanPlace = getTrimmedValue(botTurn.getRoundLetter() ,humanTurn.getPlace());
+		float botPlaceScore = botTurn.getPlace().equalsIgnoreCase(humanPlace) ? 0.5f : 1f;
+		botTurn.setPlaceMultiple(botPlaceScore);
+
+		// calculate animal score
+		String humanAnimal = getTrimmedValue(botTurn.getRoundLetter() ,humanTurn.getAnimal());
+		float botAnimalScore = botTurn.getAnimal().equalsIgnoreCase(humanAnimal) ? 0.5f : 1f;
+		botTurn.setAnimalMultiple(botAnimalScore);
+
+		// calculate name score
+		String humanName = getTrimmedValue(botTurn.getRoundLetter() ,humanTurn.getName());
+		float botNameScore = botTurn.getName().equalsIgnoreCase(humanName) ? 0.5f : 1f;
+		botTurn.setNameMultiple(botNameScore);
+
+
+		// calculate thing score
+		String humanThing = getTrimmedValue(botTurn.getRoundLetter() ,humanTurn.getThing());
+		float botThingScore = botTurn.getThing().equalsIgnoreCase(humanThing) ? 0.5f : 1f;
+		botTurn.setThingMultiple(botThingScore);
+
+		// calculate song score
+		String humanSong = getTrimmedValue(botTurn.getRoundLetter() ,humanTurn.getSong());
+		float botSongScore = botTurn.getSong().equalsIgnoreCase(humanSong) ? 0.5f : 1f;
+		botTurn.setSongMultiple(botSongScore);
+
+		float totalMulitpleScore = botPlaceScore + botAnimalScore + botNameScore + botThingScore + botSongScore;
+		return (int) (totalMulitpleScore * SCORE_HIGH);
+	}
+
+	public int getHumanScore (Turn botTurn, Turn humanTurn) throws SQLException {
+		// calculate place score
+		float humanPlaceScore = 0;
+		String humanPlace = getTrimmedValue(botTurn.getRoundLetter() ,humanTurn.getPlace());
+
+		if (isWordInDb(botTurn.getRoundLetter(), TurnEntry.COLUMN_PLACE, humanPlace)) {
+			humanPlaceScore = botTurn.getPlace().equalsIgnoreCase(humanPlace) ? 0.5f : 1f;
+		}
+
+		humanTurn.setPlaceMultiple(humanPlaceScore);
+
+		// calculate animal score
+		float humanAnimalScore = 0;
+		String humanAnimal = getTrimmedValue(botTurn.getRoundLetter() ,humanTurn.getAnimal());
+
+		if (isWordInDb(botTurn.getRoundLetter(), TurnEntry.COLUMN_ANIMAL, humanAnimal)) {
+			humanAnimalScore = botTurn.getAnimal().equalsIgnoreCase(humanAnimal) ? 0.5f : 1f;
+		}
+		humanTurn.setAnimalMultiple(humanAnimalScore);
+
+		// calculate name score
+		float humanNameScore = 0;
+		String humanName = getTrimmedValue(botTurn.getRoundLetter() ,humanTurn.getName());
+
+		if (isWordInDb(botTurn.getRoundLetter(), TurnEntry.COLUMN_NAME, humanName)) {
+			humanNameScore = botTurn.getName().equalsIgnoreCase(humanName) ? 0.5f : 1f;
+		} else if ( !humanName.isEmpty() ) {
+			humanNameScore = 1f;
+		}
+		humanTurn.setNameMultiple(humanNameScore);
+
+		// calculate thing score
+		float humanThingScore = 0;
+		String humanThing = getTrimmedValue(botTurn.getRoundLetter() ,humanTurn.getThing());
+
+		if (isWordInDb(botTurn.getRoundLetter(), TurnEntry.COLUMN_THING, humanThing)) {
+			humanThingScore = botTurn.getThing().equalsIgnoreCase(humanThing) ? 0.5f : 1f;
+		}
+		humanTurn.setThingMultiple(humanThingScore);
+
+		// calculate song score
+		float humanSongScore = 0;
+		String humanSong = getTrimmedValue(botTurn.getRoundLetter() ,humanTurn.getSong());
+
+		if (isWordInDb(botTurn.getRoundLetter(), TurnEntry.COLUMN_SONG, humanSong)) {
+			humanSongScore = botTurn.getSong().equalsIgnoreCase(humanSong) ? 0.5f : 1f;
+		} else if ( !humanSong.isEmpty() ) {
+			humanSongScore = 1f;
+		}
+		humanTurn.setSongMultiple(humanSongScore);
+
+		float totalMulitpleScore = humanPlaceScore + humanAnimalScore + humanNameScore + humanThingScore + humanSongScore;
+		return (int) (totalMulitpleScore * SCORE_HIGH);
+	}
+
 	public int calculateScore (Turn humanTurn, Turn botTurn) throws SQLException {
 		float multipleSum =0,temp = 0;
 		humanTurn.setPlaceMultiple( temp = getWordMultiple( humanTurn.getRoundLetter(),
@@ -126,12 +212,38 @@ public class ScoreCalculator {
 
 		QueryBuilder<Turn, Integer> builder = turnDao.queryBuilder();
 		Where<Turn, Integer> where = builder.where();
-		where.and( where.eq( TurnEntry.COLUMN_ROUND_LETTER, roundLetter ), where.like( columnName, trimmedValue ),
-				where.eq( TurnEntry.COLUMN_PLAYER_TYPE, PlayerType.HUMAN ) );
+		where.and(
+				where.eq( TurnEntry.COLUMN_ROUND_LETTER, roundLetter ),
+				where.like( columnName, trimmedValue ),
+				where.eq( TurnEntry.COLUMN_PLAYER_TYPE, PlayerType.HUMAN )
+		);
 
 		List<Turn> turns = turnDao.query( builder.prepare() );
-				turnDao.queryForFieldValuesArgs( map );
+		turnDao.queryForFieldValuesArgs( map );
+
 		return turns.size() == 0 ? 1 : 0.5f; // No turn found in the column with given value then multiple is 1 else 0
+	}
+
+
+	private boolean isWordInDb (String roundLetter, String columnName, String trimmedValue) throws SQLException {
+		Dao<Turn, Integer> turnDao = dbHelper.getTurnDao();
+		Map<String, Object> map = new HashMap<>();
+		map.put( TurnEntry.COLUMN_ROUND_LETTER, roundLetter );
+		map.put( columnName, trimmedValue );
+
+		QueryBuilder<Turn, Integer> builder = turnDao.queryBuilder();
+		Where<Turn, Integer> where = builder.where();
+		where.and(
+				where.eq( TurnEntry.COLUMN_ROUND_LETTER, roundLetter ),
+				where.like( columnName, trimmedValue )
+				// where.eq( TurnEntry.COLUMN_PLAYER_TYPE, PlayerType.BOT )
+		);
+
+		List<Turn> turns = turnDao.query( builder.prepare() );
+		turnDao.queryForFieldValuesArgs( map );
+
+		// if word in db return true else false
+		return turns.size() > 0;
 	}
 
 	private String getTrimmedValue (String roundLetter, String value) {

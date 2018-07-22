@@ -52,12 +52,17 @@ public class GameActivity extends BaseActivity implements GameInteractionListene
 		this.round = round;
 		Turn humanTurn = TurnValidator.cleanTurn( round.getHumanTurn() );
 		try {
-			int botScore = scorer.getScore( this.round.getBotTurn() );
+			// calculate bot score
+			int botScore = scorer.getBotScore( this.round.getBotTurn(), humanTurn );
 			this.round.getBotTurn().setScore( botScore );
-			int humanScore = scorer.calculateScore( this.round.getHumanTurn(),
-					this.round.getBotTurn() );
+
+			// calculate human score
+			int humanScore = scorer.getHumanScore( this.round.getBotTurn(), this.round.getHumanTurn() );
 			this.round.getHumanTurn().setScore( humanScore );
-			dbHelper.getTurnDao().create( humanTurn );
+
+			// save human enries in db
+			// dbHelper.getTurnDao().create( humanTurn );
+
 			if (Round.RoundOutcome.NONE == this.round.getPlayer1Outcome()) {
 				this.round
 						.setPlayer1Outcome( humanScore < botScore ? Round.RoundOutcome.LOST : Round.RoundOutcome.DRAW );

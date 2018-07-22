@@ -20,8 +20,9 @@ public class PantsDbHelper extends OrmLiteSqliteOpenHelper {
 	public static final int DATABASE_VERSION = 1;
 
 	public static final String DATABASE_NAME = "pants.db";
+//    public Object shadow$_klass_;
 
-	private SQLiteHelper helper;
+    private SQLiteHelper helper;
 
 	private Dao<Turn, Integer>                 turnDao;
 	private RuntimeExceptionDao<Turn, Integer> turnException;
