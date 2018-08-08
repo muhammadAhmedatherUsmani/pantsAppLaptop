@@ -20,8 +20,10 @@
 	<string name="title_done">Done!</string>
 	<string name="msg_none_outcome">This match is very confusing!</string>
     <string name="human">Human</string>
+    <string name="play">Play</string>
+	<string name="todo">TODO</string>
 
-    <string-array name="array_draw_outcome">
+	<string-array name="array_draw_outcome">
 		<item>Well done for drawing with the BOT! Hard to beat the machine!</item>
 		<item>Well done for drawing with the BOT! You are a machine!</item>
 		<item>Well well someone seems to be as smart as the BOT!</item>

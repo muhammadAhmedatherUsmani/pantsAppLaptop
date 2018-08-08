@@ -3,15 +3,16 @@
 				android:orientation="horizontal"
 			  android:layout_width="match_parent"
 			  android:layout_height="match_parent"
-				android:background="#E6E6EA"
-		>
+				android:background="@color/translucent">
+
 
 	<VideoView
-			android:layout_width="match_parent"
-			android:layout_height="match_parent"
-			android:id="@+id/video_view"
+		android:id="@+id/video_view"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/translucent"
 
-			/>
+		/>
 
 	<ImageView
 			android:layout_width="wrap_content"
@@ -23,33 +24,16 @@
 			android:layout_marginTop="32dp"
 			android:visibility="gone"
 			android:background="@color/mat_green"
-		/>
+		android:contentDescription="@string/todo" />
 
 	<Button
 			style="@style/Widget.Button"
-			android:text="Play"
+			android:text="@string/play"
 			android:id="@+id/btn_play"
 			android:layout_alignParentBottom="true"
 			android:layout_marginBottom="64dp"
 			android:layout_centerHorizontal="true"
 		/>
 
-	<RelativeLayout
-			android:visibility="gone"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content">
-
-		<ImageView
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:src="@drawable/logo_line"
-				/>
-
-		<ImageView
-				android:layout_width="80dp"
-				android:layout_height="80dp"
-				android:src="@drawable/logo_p"
-				/>
-	</RelativeLayout>
 
 </RelativeLayout>

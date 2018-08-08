@@ -150,7 +150,7 @@ public class ScoreCalculator {
 
 	public int calculateScore (Turn humanTurn, Turn botTurn) throws SQLException {
 		float multipleSum =0,temp = 0;
-		humanTurn.setPlaceMultiple( temp = getWordMultiple( humanTurn.getRoundLetter(),
+				humanTurn.setPlaceMultiple( temp = getWordMultiple( humanTurn.getRoundLetter(),
 				TurnEntry.COLUMN_PLACE,
 				humanTurn.getPlace(),
 				botTurn.getPlace() ) );
