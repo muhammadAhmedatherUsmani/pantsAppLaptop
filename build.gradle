@@ -15,8 +15,8 @@ android {
     defaultConfig {
         applicationId "com.erlystagestudios.pantsapplication"
         minSdkVersion 18
-        targetSdkVersion 27
-        versionCode 11
+        targetSdkVersion 26
+        versionCode 12
         versionName "1.7"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
