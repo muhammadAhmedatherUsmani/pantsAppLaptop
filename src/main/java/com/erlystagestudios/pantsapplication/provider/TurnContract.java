@@ -14,9 +14,9 @@ public class TurnContract {
 
 	public static final class TurnEntry {
 
-		public static final String PATH_TURN = "turn";
+		public static final String PATH_TURN = "turnNew";
 
-		public static final String TABLE_NAME = "turn";
+		public static final String TABLE_NAME = "turnNew";
 
 		public static final String _ID                 = "_id";
 		public static final String COLUMN_PLAYER_TYPE  = "playerType";

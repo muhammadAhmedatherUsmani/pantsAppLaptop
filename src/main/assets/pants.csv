@@ -1,82 +1,83 @@
-Letter,Place,Animal,Name,Thing,Song,,,,,,,
-A,Amsterdam,Antelope,Anita,Apple,ABC,,,,,,,
-A,Algeria,Ant,Anna,Acorn,About you now,,,,,,,
-A,Antarctica,Alligator,Andrew,Apricot,All of Me,,,,,,,
-B,Boston,Bat,Brian,Box,Boyfriend,,,,,,,
-B,Berlin,Baboon,Bob,Beam,Bad Blood,,,,,,,
-B,Brazil,Bee,Ben,Black,Beat It,,,,,,,
-C,Cairo,Cat,Caitlin,Clock,Count on Me,,,,,,,
-C,Cambodia,Camel,Catherine,Clutch,Chasing Cars,,,,,,,
-C,Chile ,Cheetah,Cameron,Chair,Candyman,,,,,,,
-D,Dresden,Dog,Doris,Duck,Don't stop the music,,,,,,,
-D,Dublin,Duck,Dorothy,Dungarees,Drunk,,,,,,,
-D,Dusseldorf,Dolphin,Dan,Diploma,Dog days are over,,,,,,,
-E,Exeter,Eagle,Elizabeth,Egg,Everything,,,,,,,
-E,Egypt,Earwig,Eric,Energy,Eye of the Tiger,,,,,,,
-E,Ethiopia,Elephant,Edward,Enterprise,Eye of the Tiger,,,,,,,
-F,Fiji,Frog,Frank,Footpath,Falling,,,,,,,
-F,Frankfurt,Fox,Francesca,Factory,Funkytown,,,,,,,
-F,France,Fly,Fredrick,Formula,Five colours in her hair,,,,,,,
-F,xxx,xxx,xxx,xxx,xxx,,,,,,,
-G,Greece,Giraffe,Georgia,Gold,Gasolina,,,,,,,
-G,Greenland,Goat,Grace,Glass,Girlfriend,,,,,,,
-G,Ghana,Gorilla,George,Grape,Golddigger,,,,,,,
-H,Holland,Hamster,Harry,Hen,Heart Attack,,,,,,,
-H,Haiti,Horse,Harriet,Handkerchief,Hall of Fame,,,,,,,
-H,Hungary,Hippo,Henry,Hair,Hallelujah,,,,,,,
-I,Iceland,Iguana,Isabel,Igloo,I Miss you,,,,,,,
-I,India,Impala,Iona,Ice,I see fire,,,,,,,
-
-I,Ireland,Ibis,Imogen,Ink,I'm a mess,,,,,,,
-J,Johannesburg,Jaguar,Jessica,Jog,Just give me a reason,,,,,,,
-J,Japan,Jellyfish,John,Jelly,Jealous,,,,,,,
-J,Jamaica,Jackal,Jordan,Jacket,Jailhouse Rock,,,,,,,
-K,Kenya,Kangaroo,Keith,Kite,Kathleen,,,,,,,
-K,Kazakhstan,Koala,Katie,Kitten,Kiss Me,,,,,,,
-K,Korea,Kingfisher,Kim,Knife,Kiss You,,,,,,,
-L,London,Lion,Lucy,Lentils,Lady Marmalade,,,,,,,
-L,Libya,Lema,Liliana,Lollipop,La Isla Bonita,,,,,,,
-L,Laa,Laa,Laa,Laa,Laa,,,,,,,
-L,Laos,Llama,Luther,Lemon,Love Story,,,,,,,
-M,Malta,Magpie,Martin,Map,Magic,,,,,,,
-M,mexico,Mole,Martha,Magazine,Make Love to the Music,,,,,,,
-M,Maldives,Monkey,Mick,Mug,M83,,,,,,,
-N,Netherlands,Newt,Nick,Nut,Naked,,,,,,,
-N,Nepal,Nightingale,Nicole,Nylon,National Anthem ,,,,,,,
-N,Norway,Numbat,Natasha,Nail,Neon,,,,,,,
-O,Oman,Otter,Oscar,Orange,Of the night,,,,,,,
-O,Oslo,Orangutan,Olivia,Oat,One for the Road,,,,,,,
-O,Oval,Ostrich,Oliver,Oak,One,,,,,,,
-P,Portugal,Pony,Penelope,Prune,Photograph,,,,,,,
-P,Princeton,Penguin,Peter,Pork,Pressure,,,,,,,
-P,Poland,Platypus,Petra,Port,Promises,,,,,,,
-Q,Queensland,Quail,Quasimodo,Queen,Queen,,,,,,,
-Q,Qutar,Quetzal,Quentin,Quilt,Quick,,,,,,,
-Q,Quebec,Quoll,Quinn,Question,Quiet Times,,,,,,,
-R,Russia,Rabbit,Robert,Red,Rabbit head,,,,,,,
-R,Rwanda,Rat,Ronnie,Radio ,Radio Gaga,,,,,,,
-R,Romania,Rattlesnake,Ruth,Rain,River,,,,,,,
-S,Sweden,Sausage Dog,Samuel,Shirt,Sail,,,,,,,
-S,Spain,Snail,Samantha,Salt,Satisfaction,,,,,,,
-S,South Africa,Snake,Sally,Sea,Stargazer,,,,,,,
-T,Turkey,Turkey,Terry,Tacos,Tainted Love,,,,,,,
-T,Thailand,Tree Frog,Theo,Table,Take a bow,,,,,,,
-T,Tunisia,Tiger,Tara,Toast,Two Fingers,,,,,,,
-U,Uganda,Umbrellabird,Umar,Umpire,Uptown Funk,,,,,,,
-U,UK,Uakari,Ursula,Uniform,Uptown Girl,,,,,,,
-U,USA,Uguisu,Una,University,U,,,,,,,
-V,Vietnam,Vulture,Victoria,Vanilla,Va Va Voom,,,,,,,
-V,Venice,Vampire Bird,Victor,Velvet,Valarie,,,,,,,
-V,Venezuela,Vervet Monkey,Vanessa,Vinegar,Vegas Girl,,,,,,,
-W,Wellington,Walrus,Walter,Water,Wetsuit,,,,,,,
-W,Waterloo,Wasp,Winnie,wax,What you know,,,,,,,
-W,Western Sahara,Wolf,William,Wings,Won't back down,,,,,,,
-X,Xinji,X-ray fish,Xavier,Xylophone,XO,,,,,,,
-X,Xian,X-ray tetra,Xena,X-ray,X,,,,,,,
-X,Xiamen,Xerus,Xia,X man,xoxoxo,,,,,,,
-Y,Yemen,Yak,Yvonne,Yacht,You need me I don�t need you,,,,,,,
-Y,Yidu,Yellow Baboon,Yasmin,Yo-yo,YMCA,,,,,,,
-Y,Yima,Yellow Eyed Penguin,Yash,Yogurt,Yeah,,,,,,,
-Z,Zambia,Zorse,Zack,Zero,Zero,,,,,,,
-Z,Zimbabwe,Zebra,Zara,Zoo,Zoom,,,,,,,
-Z,Zibo ,Zonkey,Zoe,Zip,Ziggy Stardust,,,,,,,
+Letter,Place,Animal,Name,Thing,Song
+A,Amsterdam,Antelope,Anita,Apple,ABC
+A,Algeria,Ant,Anna,Acorn,About you now
+A,Antarctica,Alligator,Andrew,Apricot,All of Me
+B,Boston,Bat,Brian,Box,Boyfriend
+B,Berlin,Baboon,Bob,Beam,Bad Blood
+B,Brazil,Bee,Ben,Black,Beat It
+C,Cairo,Cat,Caitlin,Clock,Count on Me
+C,Cambodia,Camel,Catherine,Clutch,Chasing Cars
+C,Chile ,Cheetah,Cameron,Chair,Candyman
+D,Dresden,Dog,Doris,Duck,Don't stop the music
+D,Dublin,Duck,Dorothy,Dungarees,Drunk
+D,Dusseldorf,Dolphin,Dan,Diploma,Dog days are over
+E,Exeter,Eagle,Elizabeth,Egg,Everything
+E,Egypt,Earwig,Eric,Energy,Eye of the Tiger
+E,Ethiopia,Elephant,Edward,Enterprise,Eye of the Tiger
+F,Fiji,Frog,Frank,Footpath,Falling
+F,Frankfurt,Fox,Francesca,Factory,Funkytown
+F,France,Fly,Fredrick,Formula,Five colours in her hair
+F,xxx,xxx,xxx,xxx,xxx
+G,Greece,Giraffe,Georgia,Gold,Gasolina
+G,Greenland,Goat,Grace,Glass,Girlfriend
+G,Ghana,Gorilla,George,Grape,Golddigger
+H,Holland,Hamster,Harry,Hen,Heart Attack
+H,Haiti,Horse,Harriet,Handkerchief,Hall of Fame
+H,Hungary,Hippo,Henry,Hair,Hallelujah
+I,Iceland,Iguana,Isabel,Igloo,I Miss you
+I,India,Impala,Iona,Ice,I see fire
+I,Ireland,Ibis,Imogen,Ink,I'm a mess
+J,Johannesburg,Jaguar,Jessica,Jog,Just give me a reason
+J,Japan,Jellyfish,John,Jelly,Jealous
+J,Jamaica,Jackal,Jordan,Jacket,Jailhouse Rock
+K,Kenya,Kangaroo,Keith,Kite,Kathleen
+K,Kazakhstan,Koala,Katie,Kitten,Kiss Me
+K,Korea,Kingfisher,Kim,Knife,Kiss You
+L,London,Lion,Lucy,Lentils,Lady Marmalade
+L,Libya,Lema,Liliana,Lollipop,La Isla Bonita
+L,Laa,Laa,Laa,Laa,Laa
+L,Laos,Llama,Luther,Lemon,Love Story
+M,Malta,Magpie,Martin,Map,Magic
+M,mexico,Mole,Martha,Magazine,Make Love to the Music
+M,Maldives,Monkey,Mick,Mug,M83
+N,Netherlands,Newt,Nick,Nut,Naked
+N,Nepal,Nightingale,Nicole,Nylon,National Anthem 
+N,Norway,Numbat,Natasha,Nail,Neon
+O,Oman,Otter,Oscar,Orange,Of the night
+O,Oslo,Orangutan,Olivia,Oat,One for the Road
+O,Oval,Ostrich,Oliver,Oak,One
+P,Portugal,Pony,Penelope,Prune,Photograph
+P,Princeton,Penguin,Peter,Pork,Pressure
+P,Poland,Platypus,Petra,Port,Promises
+Q,Queensland,Quail,Quasimodo,Queen,Queen
+Q,Qutar,Quetzal,Quentin,Quilt,Quick
+Q,Quebec,Quoll,Quinn,Question,Quiet Times
+R,Russia,Rabbit,Robert,Red,Rabbit head
+R,Rwanda,Rat,Ronnie,Radio ,Radio Gaga
+R,Romania,Rattlesnake,Ruth,Rain,River
+S,Sweden,Sausage Dog,Samuel,Shirt,Sail
+S,Spain,Snail,Samantha,Salt,Satisfaction
+S,South Africa,Snake,Sally,Sea,Stargazer
+T,Turkey,Turkey,Terry,Tacos,Tainted Love
+T,Thailand,Tree Frog,Theo,Table,Take a bow
+T,Tunisia,Tiger,Tara,Toast,Two Fingers
+U,Uganda,Umbrellabird,Umar,Umpire,Uptown Funk
+U,UK,Uakari,Ursula,Uniform,Uptown Girl
+U,USA,Uguisu,Una,University,U
+V,Vietnam,Vulture,Victoria,Vanilla,Va Va Voom
+V,Venice,Vampire Bird,Victor,Velvet,Valarie
+V,Venezuela,Vervet Monkey,Vanessa,Vinegar,Vegas Girl
+W,Wellington,Walrus,Walter,Water,Wetsuit
+W,Waterloo,Wasp,Winnie,wax,What you know
+W,Western Sahara,Wolf,William,Wings,Won't back down
+X,Xinji,X-ray fish,Xavier,Xylophone,XO
+X,Xian,X-ray tetra,Xena,X-ray,X
+X,Xiamen,Xerus,Xia,X man,xoxoxo
+Y,Yemen,Yak,Yvonne,Yacht,You need me I don�t need you
+Y,Yidu,Yellow Baboon,Yasmin,Yo-yo,YMCA
+Y,Yima,Yellow Eyed Penguin,Yash,Yogurt,Yeah
+Z,Zambia,Zorse,Zack,Zero,Zero
+Z,Zimbabwe,Zebra,Zara,Zoo,Zoom
+Z,Zibo ,Zonkey,Zoe,Zip,Ziggy Stardust
+A,A,A,A,A,A
+B,B,B,B,B,B
