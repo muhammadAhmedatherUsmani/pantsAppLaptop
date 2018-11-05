@@ -16,7 +16,7 @@ android {
         applicationId "com.erlystagestudios.pantsapplication"
         minSdkVersion 18
         targetSdkVersion 26
-        versionCode 15
+        versionCode 18
         versionName "1.7"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
